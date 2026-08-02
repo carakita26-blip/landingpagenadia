@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuasai Excel yang Benar-Benar Dipakai di Dunia Kerja</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        excel: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            dark: '#0f291e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-glow {
+            background: radial-gradient(circle at center, rgba(34, 197, 94, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+        .badge-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .6; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-excel-500 selection:text-white pb-20 md:pb-0">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-excel-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-excel-600/30">
+                    <i class="fa-regular font-bold fa-file-excel"></i>
+                </div>
+                <span class="font-extrabold text-xl tracking-tight text-slate-900">nadia<span class="text-excel-600">_excel</span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-white via-excel-50/30 to-slate-50">
+        <div class="absolute inset-0 gradient-glow pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                
+                <!-- Trust Badges Bar -->
+                <div class="inline-flex items-center gap-2 bg-emerald-100/80 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+                    <div class="flex -space-x-1.5">
+                        <img class="w-5 h-5 rounded-full border border-white" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar">
+                        <img class="w-5 h-5 rounded-full border border-white" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Avatar">
+                        <img class="w-5 h-5 rounded-full border border-white" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Avatar">
+                    </div>
+                    <span>Dipelajari oleh <strong class="text-excel-800">500+ peserta</strong> siap kerja</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight sm:leading-none mb-6">
+                    🚀 Kuasai Excel yang <span class="bg-clip-text text-transparent bg-gradient-to-r from-excel-600 to-emerald-800">Benar-Benar Dipakai</span> di Dunia Kerja
+                </h1>
+
+                <p class="text-slate-600 text-lg sm:text-xl font-normal leading-relaxed mb-8 max-w-2xl mx-auto">
+                    Belajar dari nol hingga mampu menyelesaikan pekerjaan <strong>Admin, Finance, HR,</strong> dan <strong>Staff Kantoran</strong> menggunakan Excel tanpa ribet.
+                </p>
+
+                <!-- Feature Highlights Pills -->
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <span class="inline-flex items-center gap-1.5 bg-white text-slate-700 shadow-sm border border-slate-200 text-xs font-semibold px-3 py-2 rounded-lg">
+                        ⭐ Cocok untuk Pemula
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 bg-white text-slate-700 shadow-sm border border-slate-200 text-xs font-semibold px-3 py-2 rounded-lg">
+                        ♾ Lifetime Access
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 bg-white text-slate-700 shadow-sm border border-slate-200 text-xs font-semibold px-3 py-2 rounded-lg">
+                        🔄 Update Materi Gratis
+                    </span>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#harga" class="w-full sm:w-auto text-center bg-excel-600 hover:bg-excel-700 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl shadow-excel-600/30 transition-all hover:-translate-y-1">
+                        Dapatkan ND Excel Pro <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="https://lynk.id/nadiaexcel/zewzvee5q58w/checkout?token=cGFyYW1zPSU1QiU1RCZ0aWNrZXRzPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9" class="w-full sm:w-auto text-center bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-semibold text-lg px-6 py-4 rounded-xl transition-all">
+                        Lihat Kurikulum
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="masalah" class="py-16 bg-white border-y border-slate-200/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <span class="text-red-600 text-xs sm:text-sm font-bold uppercase tracking-wider bg-red-50 px-3 py-1 rounded-full border border-red-100">Evaluasi Diri</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">Pernah Mengalami Hal Seperti Ini?</h2>
+                <p class="text-slate-600 mt-2 text-base sm:text-lg">Kebanyakan orang terjebak dalam masalah rutin ini tanpa menyadarinya.</p>
+            </div>
+
+            <div class="grid gap-4">
+                <!-- Problem Card 1 -->
+                <div class="flex items-start gap-4 p-4 sm:p-5 bg-red-50/50 border border-red-100 rounded-2xl hover:border-red-200 transition-colors">
+                    <div class="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                        ❌
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-base sm:text-lg">Gugup Saat Tes Interview Kerja</h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-0.5">Merasa cemas dan bingung ketika penguji memberikan soal studi kasus tes Excel secara mendadak.</p>
+                    </div>
+                </div>
+
+                <!-- Problem Card 2 -->
+                <div class="flex items-start gap-4 p-4 sm:p-5 bg-red-50/50 border border-red-100 rounded-2xl hover:border-red-200 transition-colors">
+                    <div class="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                        ❌
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-base sm:text-lg">Bingung Saat Diminta Membuat Laporan Kantor</h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-0.5">Stuck berjam-jam saat atasan meminta laporan rekap bulanan yang siap pakai.</p>
+                    </div>
+                </div>
+
+                <!-- Problem Card 3 -->
+                <div class="flex items-start gap-4 p-4 sm:p-5 bg-red-50/50 border border-red-100 rounded-2xl hover:border-red-200 transition-colors">
+                    <div class="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                        ❌
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-base sm:text-lg">Menghabiskan Waktu Berjam-jam Hanya Merapikan Data</h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-0.5">Memasukkan data manual satu per satu karena tidak tahu trik cepat dan rumus efektif.</p>
+                    </div>
+                </div>
+
+                <!-- Problem Card 4 -->
+                <div class="flex items-start gap-4 p-4 sm:p-5 bg-red-50/50 border border-red-100 rounded-2xl hover:border-red-200 transition-colors">
+                    <div class="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                        ❌
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-base sm:text-lg">Selalu Mencari Rumus di Google Berulang Kali</h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-0.5">Tidak benar-benar paham logika rumus Excel, sehingga terus-menerus browsing setiap ada tugas baru.</p>
+                    </div>
+                </div>
+
+                <!-- Problem Card 5 -->
+                <div class="flex items-start gap-4 p-4 sm:p-5 bg-red-50/50 border border-red-100 rounded-2xl hover:border-red-200 transition-colors">
+                    <div class="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                        ❌
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-base sm:text-lg">Merasa Skill Tertinggal Dibanding Rekan Kerja</h3>
+                        <p class="text-slate-600 text-sm sm:text-base mt-0.5">Melihat rekan kerja menyelesaikan pekerjaan dalam hitungan menit sementara kamu masih kewalahan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emotional Connection Callout -->
+            <div class="mt-10 bg-slate-900 text-white rounded-2xl p-6 sm:p-8 text-center relative overflow-hidden">
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Kalau iya... Kamu tidak sendirian.</h3>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Banyak orang belajar Excel dari video yang terpisah-pisah. Akhirnya tahu sedikit demi sedikit, tetapi <strong>tetap bingung ketika harus menggunakannya di dunia kerja nyata.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution / Transformation Section -->
+    <section id="solusi" class="py-16 sm:py-24 bg-gradient-to-b from-slate-50 to-excel-50/40">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14">
+                <span class="text-excel-600 text-xs sm:text-sm font-bold uppercase tracking-wider bg-excel-100 px-3 py-1 rounded-full">Transformasi Karir</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3">Bayangkan 30 Hari Dari Sekarang...</h2>
+                <p class="text-slate-600 mt-2 text-base sm:text-lg">Inilah yang akan kamu rasakan setelah menyelesaikan course ini.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-excel-100 rounded-xl flex items-center justify-center text-excel-600 text-xl font-bold mb-4">
+                        ✅
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Jauh Lebih Percaya Diri</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Kamu menguasai logika dan fungsi Excel tanpa perlu ragu lagi saat membuka spreadsheet.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-excel-100 rounded-xl flex items-center justify-center text-excel-600 text-xl font-bold mb-4">
+                        ✅
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Laporan Selesai 5x Lebih Cepat</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Tugas harian selesai tepat waktu bahkan lebih awal. Kamu punya waktu lebih untuk berkembang.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-excel-100 rounded-xl flex items-center justify-center text-excel-600 text-xl font-bold mb-4">
+                        ✅
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Mandiri Tanpa Merepotkan Orang lain</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Tidak perlu lagi sering bertanya atau bergantung pada rekan kerja saat ada data rumit.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-excel-100 rounded-xl flex items-center justify-center text-excel-600 text-xl font-bold mb-4">
+                        ✅
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Siap Lolos Tes Excel Interview</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Menyapu bersih semua soal tes praktik dari HR/User saat proses seleksi kerja.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-md transition-shadow md:col-span-2 lg:col-span-2">
+                    <div class="w-12 h-12 bg-excel-100 rounded-xl flex items-center justify-center text-excel-600 text-xl font-bold mb-4">
+                        ✅
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Menjadi "Go-To Person" Pengolah Data di Kantor</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Dipercaya oleh atasan untuk mengolah dashboard & laporan penting yang meningkatkan nilai profesionalmu.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-lg font-semibold text-slate-800">
+                    Semua itu bisa dimulai dari materi yang terstruktur dan langsung bisa dipraktikkan!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="py-16 bg-white border-b border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Siapa Yang Wajib Join Kelas Ini?</h2>
+                <p class="text-slate-600 mt-2">Didesain khusus sesuai dengan workflow dunia kerja sehari-hari.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60 hover:border-excel-500 transition-all hover:-translate-y-1">
+                    <div class="text-3xl mb-2">🎓</div>
+                    <div class="font-bold text-slate-800 text-sm">Fresh Graduate</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60 hover:border-excel-500 transition-all hover:-translate-y-1">
+                    <div class="text-3xl mb-2">📑</div>
+                    <div class="font-bold text-slate-800 text-sm">Admin</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60 hover:border-excel-500 transition-all hover:-translate-y-1">
+                    <div class="text-3xl mb-2">💰</div>
+                    <div class="font-bold text-slate-800 text-sm">Finance</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60 hover:border-excel-500 transition-all hover:-translate-y-1">
+                    <div class="text-3xl mb-2">👥</div>
+                    <div class="font-bold text-slate-800 text-sm">HR / Recruiter</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60 hover:border-excel-500 transition-all hover:-translate-y-1">
+                    <div class="text-3xl mb-2">⌨️</div>
+                    <div class="font-bold text-slate-800 text-sm">Data Entry</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/60 hover:border-excel-500 transition-all hover:-translate-y-1">
+                    <div class="text-3xl mb-2">💼</div>
+                    <div class="font-bold text-slate-800 text-sm">Staff Kantoran</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum / Study Case Section -->
+    <section id="materi" class="py-16 sm:py-24 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <span class="text-emerald-400 text-xs sm:text-sm font-bold uppercase tracking-wider bg-emerald-950 px-3 py-1 rounded-full border border-emerald-800">Studi Kasus Real</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Yang Akan Kamu Pelajari di Excel Pro</h2>
+                <p class="text-slate-400 mt-2 max-w-2xl mx-auto">Tidak hanya teori, kamu langsung mempraktikkan simulasi tugas kantor nyata.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Case 1 -->
+                <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700">
+                    <div class="text-emerald-400 font-bold text-sm mb-2">01. ABSENSI & HR</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Rekap Absensi & Jam Kerja</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Rekap Absensi Otomatis</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Menghitung Jam Kerja & Lembur</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Studi Kasus HR Real Project</li>
+                    </ul>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700">
+                    <div class="text-emerald-400 font-bold text-sm mb-2">02. FINANCE & PAYROLL</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Bonus & Tagihan Jatuh Tempo</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Menghitung Bonus Karyawan</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Alert Tagihan Jatuh Tempo</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Studi Kasus Finance Real Project</li>
+                    </ul>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700">
+                    <div class="text-emerald-400 font-bold text-sm mb-2">03. DATA MANAGEMENT</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Compare & Input Data</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Compare Data Raksasa Cepat</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Input Data Otomatis & Validasi</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Studi Kasus Admin Real Project</li>
+                    </ul>
+                </div>
+
+                <!-- Case 4 -->
+                <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700">
+                    <div class="text-emerald-400 font-bold text-sm mb-2">04. VISUALISASI</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Grafik & Barcode</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Pembuatan Barcode Otomatis</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Grafik & Chart Interaktif</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Visual Report Menarik</li>
+                    </ul>
+                </div>
+
+                <!-- Case 5 -->
+                <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 lg:col-span-2">
+                    <div class="text-emerald-400 font-bold text-sm mb-2">05. EXECUTIVE REPORTING</div>
+                    <h3 class="font-bold text-lg text-white mb-3">Dashboard Interaktif & Template Siap Pakai</h3>
+                    <p class="text-slate-300 text-sm mb-4">Belajar menggabungkan semua fungsi menjadi satu Dashboard Laporan Executive yang bersih, profesional, dan mudah dipahami atasan.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-slate-700 text-emerald-300 text-xs px-3 py-1 rounded-full">Pivot Table</span>
+                        <span class="bg-slate-700 text-emerald-300 text-xs px-3 py-1 rounded-full">Slicers</span>
+                        <span class="bg-slate-700 text-emerald-300 text-xs px-3 py-1 rounded-full">Conditional Formatting</span>
+                        <span class="bg-slate-700 text-emerald-300 text-xs px-3 py-1 rounded-full">Template Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Packages Section -->
+    <section id="harga" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-excel-600 text-xs sm:text-sm font-bold uppercase tracking-wider bg-excel-100 px-3 py-1 rounded-full">Pilihan Investasi Skill</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-3">Pilih Paket yang Sesuai Kebutuhanmu</h2>
+                <p class="text-slate-600 mt-2 text-base sm:text-lg">Mulai langkah pertamamu kuasai Excel hari ini.</p>
+            </div>
+
+            <!-- Pricing Cards Grid -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch mb-20">
+                
+                <!-- Starter Package Card -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between relative hover:border-slate-300 transition-all">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-slate-800">🟢 ND Excel Starter Pack</h3>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-3 py-1 rounded-full font-semibold">Dasar & Teori</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mb-6">Cocok untuk kamu yang ingin menguasai dasar Excel sebelum mempelajari studi kasus dunia kerja.</p>
+                        
+                        <div class="mb-6">
+                            <div class="text-3xl font-extrabold text-slate-900">Rp39.000</div>
+                            <div class="text-xs text-slate-400 mt-1">Akses Sekali Bayar</div>
+                        </div>
+
+                        <hr class="border-slate-100 mb-6">
+
+                        <div class="space-y-3 mb-8 text-sm text-slate-700">
+                            <div class="font-bold text-slate-900 text-xs uppercase tracking-wider">Yang Kamu Dapatkan:</div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-600"></i> 112 Shortcut Excel Interactive</div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-600"></i> 100 Formula Excel</div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-600"></i> 100 Soal Interview Excel</div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-600"></i> Materi Dasar Excel</div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-600"></i> File Latihan</div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-600"></i> ♾ Lifetime Access</div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-600"></i> 📥 Update Materi Berkala</div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/?text=Halo%20saya%20ingin%20membeli%20paket%20ND%20Excel%20Starter%20Pack" target="_blank" class="w-full text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 px-6 rounded-xl transition-colors">
+                        Mulai Dengan ND Excel Starter Pack
+                    </a>
+                </div>
+
+                <!-- Pro Package Card (Best Value) -->
+                <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white rounded-3xl p-8 border-2 border-emerald-500 shadow-2xl flex flex-col justify-between relative transform md:-translate-y-2">
+                    <div class="absolute -top-4 right-8 bg-gradient-to-r from-red-600 to-red-500 text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg shadow-red-600/30">
+                        🔥 BEST SELLER
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-2xl font-bold text-emerald-400">👑 ND Excel Pro Pack</h3>
+                        </div>
+                        <p class="text-slate-300 text-sm mb-6">Paket paling lengkap untuk kamu yang ingin benar-benar menguasai Excel dan siap menghadapi tantangan kerja.</p>
+                        
+                        <div class="mb-4 sm:mb-6">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl sm:text-4xl font-extrabold text-white">Rp79.000</span>
+                                <span class="hidden sm:inline text-slate-400 line-through text-sm">Rp199.000</span>
+                            </div>
+                            <div class="text-[10px] sm:text-xs text-emerald-400 font-semibold mt-1">Diskon 60% Khusus Hari Ini!</div>
+                        </div>
+
+                        <hr class="border-slate-700 mb-6">
+
+                        <div class="space-y-3 mb-8 text-sm text-slate-200">
+                            <div class="font-bold text-white text-xs uppercase tracking-wider">Semua Fitur Starter, Ditambah:</div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> <strong>🚀 Semua Studi Kasus Dunia Kerja</strong></div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> <strong>🎁 Video Tutorial Latihan</strong></div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> <strong>🎁 Template Excel Siap Pakai</strong></div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> <strong>🎁 Studi Kasus Admin, HR & Finance</strong></div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> 🚀 Dashboard & Laporan Interaktif</div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> 🚀 Prioritas Update Materi Baru</div>
+                            <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> ♾ Lifetime Access</div>
+                        </div>
+                    </div>
+
+                    <a href="https://lynk.id/nadiaexcel/zewzvee5q58w/checkout?token=cGFyYW1zPSU1QiU1RCZ0aWNrZXRzPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9" target="_blank" class="w-full text-center bg-excel-600 hover:bg-excel-500 text-white font-extrabold py-4 px-6 rounded-xl shadow-lg shadow-excel-600/40 transition-all hover:scale-[1.02]">
+                        🚀 Dapatkan ND Excel Pro Pack Sekarang
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 bg-slate-50 border-b border-slate-200">
+                    <h3 class="text-xl font-bold text-slate-900 text-center">Tabel Perbandingan Paket</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-slate-100/70 border-b border-slate-200 text-slate-700">
+                            <tr>
+                                <th class="p-4 font-bold">Fitur</th>
+                                <th class="p-4 font-bold text-center w-36">ND Excel Starter Pack</th>
+                                <th class="p-4 font-bold text-center w-36 bg-emerald-50 text-emerald-900">👑 ND Excel Pro Pack</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">112 Shortcut Excel</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold">✅</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">100 Formula Excel</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold">✅</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">100 Soal Interview</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold">✅</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">Lifetime Access</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold">✅</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">Update Materi Berkala</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold">✅</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">Prioritas Update Materi Baru</td>
+                                <td class="p-4 text-center text-slate-300 font-bold">❌</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">Studi Kasus Dunia Kerja</td>
+                                <td class="p-4 text-center text-slate-300 font-bold">❌</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">Template Excel Siap Pakai</td>
+                                <td class="p-4 text-center text-slate-300 font-bold">❌</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">Video Tutorial</td>
+                                <td class="p-4 text-center text-slate-300 font-bold">❌</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">Studi Kasus Admin & HR</td>
+                                <td class="p-4 text-center text-slate-300 font-bold">❌</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">Studi Kasus Finance</td>
+                                <td class="p-4 text-center text-slate-300 font-bold">❌</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-800">Dashboard & Laporan Interaktif</td>
+                                <td class="p-4 text-center text-slate-300 font-bold">❌</td>
+                                <td class="p-4 text-center text-emerald-600 font-bold bg-emerald-50/40">✅</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 sm:py-24 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-excel-600 text-xs sm:text-sm font-bold uppercase tracking-wider bg-excel-100 px-3 py-1 rounded-full">Kisah Sukses Alumni</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Apa Kata Mereka Yang Sudah Belajar?</h2>
+                <p class="text-slate-600 mt-2">Testimoni nyata dari pembeli yang telah terbantu di tempat kerja.</p>
+            </div>
+
+            <div class="relative max-w-6xl mx-auto">
+                <button type="button" id="testimonial-prev" class="absolute left-2 sm:left-0 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-slate-200 bg-white/95 text-slate-700 shadow-sm transition hover:bg-slate-50">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="mx-10 sm:mx-12 overflow-hidden">
+                    <div id="testimonial-slider" class="flex transition-transform duration-500 ease-out touch-pan-y">
+                        <div class="testimonial-slide w-full min-w-full shrink-0 px-1 sm:px-2">
+                            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-4">Materi nya bagus banget kak, terutama yang materi pivot otomatis. Ngebantu kerjaan aku banget kak, yang tadinya aku ngerjain laporan 3 jam sekarang jadi cuman 30 menit. Worth it banget sih menurut ku kak</p>
+                                <div class="font-bold text-slate-900">— Dina K</div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide w-full min-w-full shrink-0 px-1 sm:px-2">
+                            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-4">Aku cuma mau bilang terimakasih banyak kak untuk materinya, terutama yang materi interview Excel, pas aku interview kemarin kepake banget kakk</p>
+                                <div class="font-bold text-slate-900">— Christy</div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide w-full min-w-full shrink-0 px-1 sm:px-2">
+                            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-4">Materinya bagus banget kak, aku anak magang jadi keliatan kayak staff disini karena aku udah bisa bantu2 tim ku ngerjain kerjaan mereka. Kebetulan banget magang aku abis bulan ini, semoga aku di angkat jadi staff kak</p>
+                                <div class="font-bold text-slate-900">— Nia Aulia</div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide w-full min-w-full shrink-0 px-1 sm:px-2">
+                            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-4">Menurut aku bagus banget materinya kak, terutama yang formula Excel, aku pake buat latihan sepulang kerja, jadi kerjaan bisa lebih cepet. Sekarang udah jadi andelan pak bos kak buat ngurusin per administrasi an ini</p>
+                                <div class="font-bold text-slate-900">— Siti Maghfirah</div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide w-full min-w-full shrink-0 px-1 sm:px-2">
+                            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-4">Iya kak nad, ijin kasih feedback ya, aku udh beberapa kali beli materi Excel sebelumnya, tapi yang kakak buat ini bener2 kepake di kantor aku kak. Sekarang aku bisa kerja lebih cepet, bos ku juga seneng sama performance aku, alhasil KPI kantor kecapai kak dan aku dapet bonus yang melebihi ekspetasi aku</p>
+                                <div class="font-bold text-slate-900">— Rania</div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide w-full min-w-full shrink-0 px-1 sm:px-2">
+                            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-4">Halo kak, cuma mau info aja awalnya aku cuma bisa Excel dasar banget, setelah belajar dari materi kakak, penjelasannya gampang diikutin karena pakai studi kasus kerja. Skrg udah lebih pede pake rumus seperti vlookup, if, sumifs, sampai bikin pivot table. Worth it banget buat aku yang kerja sebagai admin</p>
+                                <div class="font-bold text-slate-900">— Ghifari Ramadhan</div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide w-full min-w-full shrink-0 px-1 sm:px-2">
+                            <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+                                <p class="text-slate-700 text-base sm:text-lg leading-relaxed mb-4">Jujur awalnya iseng beli karena murah. Eh ternyata isinya daging semua kak. Latihannya relate sama kerjaan admin, jadi langsung kepake di kantor. Sekarang kalau ada tugas excel udah nggak bingung lagi. Recommended banget sih buat yang baru mulai belajar excel</p>
+                                <div class="font-bold text-slate-900">— Adnan Al Rasyid</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" id="testimonial-next" class="absolute right-2 sm:right-0 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-slate-200 bg-white/95 text-slate-700 shadow-sm transition hover:bg-slate-50">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="mt-6 flex justify-center gap-2">
+                <button type="button" class="testimonial-dot h-2.5 w-2.5 rounded-full bg-excel-600 transition-colors" data-index="0" aria-label="Pilih testimoni 1"></button>
+                <button type="button" class="testimonial-dot h-2.5 w-2.5 rounded-full bg-slate-300 transition-colors" data-index="1" aria-label="Pilih testimoni 2"></button>
+                <button type="button" class="testimonial-dot h-2.5 w-2.5 rounded-full bg-slate-300 transition-colors" data-index="2" aria-label="Pilih testimoni 3"></button>
+                <button type="button" class="testimonial-dot h-2.5 w-2.5 rounded-full bg-slate-300 transition-colors" data-index="3" aria-label="Pilih testimoni 4"></button>
+                <button type="button" class="testimonial-dot h-2.5 w-2.5 rounded-full bg-slate-300 transition-colors" data-index="4" aria-label="Pilih testimoni 5"></button>
+                <button type="button" class="testimonial-dot h-2.5 w-2.5 rounded-full bg-slate-300 transition-colors" data-index="5" aria-label="Pilih testimoni 6"></button>
+                <button type="button" class="testimonial-dot h-2.5 w-2.5 rounded-full bg-slate-300 transition-colors" data-index="6" aria-label="Pilih testimoni 7"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <span class="text-excel-600 text-xs sm:text-sm font-bold uppercase tracking-wider bg-excel-100 px-3 py-1 rounded-full">FAQ</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Pertanyaan yang Sering Ditanyakan</h2>
+                <p class="text-slate-600 mt-2">Temukan jawaban untuk pertanyaan umum kamu di sini.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all shadow-sm">
+                    <button class="w-full text-left p-5 sm:p-6 font-bold text-slate-900 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span>Apakah cocok untuk pemula?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-5 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+                        Ya, sangat cocok! Semua materi disusun secara bertahap dari level paling dasar hingga tingkat lanjut, sehingga mudah diikuti meskipun kamu belum pernah belajar Excel secara mendalam sebelumnya.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all shadow-sm">
+                    <button class="w-full text-left p-5 sm:p-6 font-bold text-slate-900 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span>Apa bedanya Excel Starter dan Excel Pro?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-5 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+                        <strong>Excel Starter</strong> membantu kamu memahami dasar Excel, shortcut, formula dasar, dan persiapan interview.<br><br>
+                        <strong>Excel Pro</strong> mencakup seluruh materi Starter, ditambah studi kasus dunia kerja (Admin, HR, Finance), template siap pakai, video tutorial, serta prioritas mendapatkan semua update materi baru.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all shadow-sm">
+                    <button class="w-full text-left p-5 sm:p-6 font-bold text-slate-900 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span>Apakah aksesnya terbatas?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-5 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+                        Tidak ada batasan waktu. Semua paket mendapatkan akses seumur hidup (Lifetime Access), sehingga kamu bisa belajar kapan saja dan mengulangnya kapan pun dibutuhkan.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all shadow-sm">
+                    <button class="w-full text-left p-5 sm:p-6 font-bold text-slate-900 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span>Kapan saya menerima materi?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-5 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+                        Materi akan dikirimkan secara instant dan otomatis setelah proses pembayaran kamu berhasil dikonfirmasi.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 (Added) -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all shadow-sm">
+                    <button class="w-full text-left p-5 sm:p-6 font-bold text-slate-900 flex justify-between items-center focus:outline-none faq-toggle">
+                        <span>Bagaimana cara pakainya?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-5 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4">
+                        Setelah kamu mendapatkan file-nya, kamu bisa download semua file yang ada di Google Drive lalu mulai latihan.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing CTA Section -->
+    <section class="py-16 sm:py-24 bg-gradient-to-br from-slate-900 via-excel-dark to-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6">
+                Investasi Skill yang Akan Kamu Pakai Bertahun-tahun
+            </h2>
+            <p class="text-slate-300 text-base sm:text-xl max-w-3xl mx-auto leading-relaxed mb-8">
+                Excel bukan hanya digunakan saat interview. Hampir setiap hari, Admin, Finance, HR, Staff Kantoran, hingga Freelancer menggunakannya untuk mengolah data dan membuat laporan.<br><br>
+                <strong class="text-emerald-400">Semakin cepat kamu menguasainya, semakin besar peluangmu bekerja lebih cepat, lebih percaya diri, dan lebih bernilai di dunia kerja.</strong>
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#harga" class="w-full sm:w-auto bg-excel-600 hover:bg-excel-500 text-white font-extrabold text-lg px-8 py-4 rounded-xl shadow-xl shadow-excel-600/30 transition-all hover:scale-105">
+                    🚀 Pilih Paket & Tingkatkan Skill Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky CTA Bar (Mobile & Desktop) -->
+    <div class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 text-white py-2 px-3 z-50 shadow-md">
+        <div class="max-w-5xl mx-auto flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2 min-w-0">
+                <span class="hidden sm:inline inline-flex items-center gap-1 bg-emerald-500/20 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
+                    👑 Diskon 60%
+                </span>
+                <div class="flex items-center gap-1 bg-red-500/15 border border-red-500/30 text-red-400 text-[10px] font-semibold px-2 py-1 rounded-xl">
+                    <i class="fa-regular fa-clock text-[10px] animate-pulse"></i>
+                    <span id="sticky-countdown" class="font-mono font-bold tracking-wider text-red-300">50:00</span>
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-emerald-400 font-semibold">Rp79.000</span>
+            </div>
+
+            <a href="https://lynk.id/nadiaexcel/zewzvee5q58w/checkout?token=cGFyYW1zPSU1QiU1RCZ0aWNrZXRzPSU1QiU1RCZiaWRfcHJpY2U9MCZxdHlfcHJvZD0xJnNlc3NpZD0mdG90YWxfcHJpY2U9JnRvdGFsX3VuaXQ9" class="bg-excel-600 hover:bg-excel-500 text-white text-xs sm:text-sm font-bold px-3 py-2 rounded-xl shadow-lg shadow-excel-600/20 transition-all hover:scale-105 flex items-center justify-center gap-2 flex-1 sm:flex-none min-w-[150px]">
+                <span>Dapatkan ND Excel Pro</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 text-xs sm:text-sm py-8 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 Nadia_Excel Course. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Interactive FAQ Accordion Logic
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionContent = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle display
+                const isHidden = accordionContent.classList.contains('hidden');
+                
+                // Close all other open FAQs
+                document.querySelectorAll('.faq-toggle').forEach(otherBtn => {
+                    otherBtn.nextElementSibling.classList.add('hidden');
+                    otherBtn.querySelector('i').classList.remove('rotate-180');
+                });
+
+                if (isHidden) {
+                    accordionContent.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+
+        // 50-Minute Countdown Timer simulation for urgency (resets on refresh)
+        function startTimer(duration, display) {
+            let timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration; // loop back if reaches 00:00
+                }
+            }, 1000);
+        }
+
+        window.addEventListener('load', function () {
+            const fiftyMinutes = 50 * 60; // 50 minutes in seconds
+            const display = document.querySelector('#sticky-countdown');
+            if (display) {
+                startTimer(fiftyMinutes, display);
+            }
+
+            // Ensure testimonial images load correctly on mobile by encoding filenames with spaces
+            document.querySelectorAll('#testimonial-slider img[data-src]').forEach(img => {
+                const ds = img.getAttribute('data-src');
+                if (ds) {
+                    img.src = encodeURI('./' + ds);
+                }
+            });
+
+            const slider = document.getElementById('testimonial-slider');
+            const viewport = slider?.parentElement; // visible viewport wrapper
+            const slides = Array.from(document.querySelectorAll('.testimonial-slide'));
+            const prevButton = document.getElementById('testimonial-prev');
+            const nextButton = document.getElementById('testimonial-next');
+            const dots = Array.from(document.querySelectorAll('.testimonial-dot'));
+            let currentIndex = 0;
+            let slideWidth = 0;
+
+            function updateTestimonials() {
+                if (!slider || !slides.length) return;
+                // Recalculate slide width each time to avoid incorrect measurements on mobile
+                // Prefer viewport width (visible area) so each slide occupies full viewport
+                if (viewport) {
+                    slideWidth = viewport.getBoundingClientRect().width;
+                } else {
+                    slideWidth = slides[0].getBoundingClientRect().width || slides[0].offsetWidth;
+                }
+                slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+                dots.forEach((dot, index) => {
+                    const isActive = index === currentIndex;
+                    dot.classList.toggle('bg-excel-600', isActive);
+                    dot.classList.toggle('bg-slate-300', !isActive);
+                });
+            }
+
+            function goToSlide(index) {
+                currentIndex = (index + slides.length) % slides.length;
+                updateTestimonials();
+            }
+
+            function updateSlideWidth() {
+                // Ensure we calculate a reliable width (use viewport width as primary)
+                slideWidth = viewport?.getBoundingClientRect().width || slides[0]?.getBoundingClientRect().width || 0;
+                updateTestimonials();
+            }
+
+            prevButton?.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+                requestAnimationFrame(updateSlideWidth);
+            });
+            nextButton?.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+                requestAnimationFrame(updateSlideWidth);
+            });
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => goToSlide(index));
+            });
+            window.addEventListener('resize', updateSlideWidth);
+
+            updateSlideWidth();
+        });
+    </script>
+</body>
+</html>
